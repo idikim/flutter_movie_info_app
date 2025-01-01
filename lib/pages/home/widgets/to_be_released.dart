@@ -4,10 +4,7 @@ class ToBeReleased extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      Container(
-          alignment: Alignment.centerLeft,
-          padding: const EdgeInsets.all(20),
-          child: Text('개봉예정')),
+      NameOfField('개봉예정'),
       SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           padding: EdgeInsets.only(left: 20),
@@ -23,5 +20,12 @@ class ToBeReleased extends StatelessWidget {
                             height: 180))))
           ]))
     ]);
+  }
+
+  Container NameOfField(String name) {
+    return Container(
+        alignment: Alignment.centerLeft,
+        padding: const EdgeInsets.all(20),
+        child: Text(name));
   }
 }
