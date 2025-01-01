@@ -13,7 +13,7 @@ ThemeData _theme(Brightness brightness, AppThemeExtension ext) {
       extensions: [ext],
       textTheme: TextTheme(
         // bodyLarge: TextStyle(fontSize: 20),
-        bodyMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+        bodyMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.w900),
         // bodySmall: TextStyle(fontSize: 20),
       ));
 }
