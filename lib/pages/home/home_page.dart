@@ -11,29 +11,40 @@ class HomePage extends StatelessWidget {
             child: Text('가장 인기있는'),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Expanded(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
                 child: Image.network('https://picsum.photos/600/900',
-                    fit: BoxFit.cover)),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20),
-            child: Text('현재 상영중'),
-          ),
-          Container(
-            height: 200,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                ...List.generate(
-                  10,
-                  (index) => Container(
-                    width: 100,
-                    child: Image.network('https://picsum.photos/600/900'),
-                  ),
-                )
-              ],
-            ),
+                    fit: BoxFit.cover),
+              )),
+          Column(
+            children: [
+              Container(
+                alignment: Alignment.centerLeft,
+                padding: const EdgeInsets.all(20),
+                child: Text('현재 상영중'),
+              ),
+              Container(
+                padding: EdgeInsets.only(left: 20),
+                height: 180,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    ...List.generate(
+                      20,
+                      (index) => Container(
+                        padding: EdgeInsets.only(right: 10),
+                        alignment: Alignment.centerLeft,
+                        child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child:
+                                Image.network('https://picsum.photos/600/900')),
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
           )
         ],
       ),
