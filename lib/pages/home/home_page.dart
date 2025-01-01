@@ -45,7 +45,94 @@ class HomePage extends StatelessWidget {
                 ),
               )
             ],
-          )
+          ),
+          Column(
+            children: [
+              Container(
+                alignment: Alignment.centerLeft,
+                padding: const EdgeInsets.all(20),
+                child: Text('인기순'),
+              ),
+              Container(
+                padding: EdgeInsets.only(left: 20),
+                height: 180,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    ...List.generate(
+                      20,
+                      (index) => Container(
+                        padding: EdgeInsets.only(right: 10),
+                        alignment: Alignment.centerLeft,
+                        child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child:
+                                Image.network('https://picsum.photos/600/900')),
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+          Column(
+            children: [
+              Container(
+                alignment: Alignment.centerLeft,
+                padding: const EdgeInsets.all(20),
+                child: Text('평점 높은순'),
+              ),
+              Container(
+                padding: EdgeInsets.only(left: 20),
+                height: 180,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    ...List.generate(
+                      20,
+                      (index) => Container(
+                        padding: EdgeInsets.only(right: 10),
+                        alignment: Alignment.centerLeft,
+                        child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child:
+                                Image.network('https://picsum.photos/600/900')),
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+          Column(
+            children: [
+              Container(
+                alignment: Alignment.centerLeft,
+                padding: const EdgeInsets.all(20),
+                child: Text('개봉예정'),
+              ),
+              Container(
+                padding: EdgeInsets.only(left: 20),
+                height: 180,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    ...List.generate(
+                      20,
+                      (index) => Container(
+                        padding: EdgeInsets.only(right: 10),
+                        alignment: Alignment.centerLeft,
+                        child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child:
+                                Image.network('https://picsum.photos/600/900')),
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ],
       ),
     );
