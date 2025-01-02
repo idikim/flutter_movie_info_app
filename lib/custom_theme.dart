@@ -34,7 +34,7 @@ class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
 class DarkTheme extends AppThemeExtension {
   DarkTheme({
     super.main = Colors.white,
-    super.mainLight = const Color(0xAA0000FF),
+    super.mainLight = Colors.blue,
     super.sub = Colors.grey,
     super.background = Colors.black,
   });

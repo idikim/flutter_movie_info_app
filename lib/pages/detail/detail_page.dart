@@ -39,13 +39,7 @@ class DetailPage extends StatelessWidget {
                   '100분',
                   style: context.theme.textTheme.bodySmall,
                 ),
-                Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: Container(
-                        height: 1,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                        ))),
+                separator(),
                 Row(
                   spacing: 5,
                   children: [
@@ -55,23 +49,11 @@ class DetailPage extends StatelessWidget {
                     categoryIcon(context, 'Comedy'),
                   ],
                 ),
-                Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: Container(
-                        height: 1,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                        ))),
+                separator(),
                 Text(
                     "In Ancient Polynesia, when a terrible curse incurred by Maui reaches an impetuous Chieftain's daughter's island, she answers the Ocean's call to seek out the demigod to set things right.",
                     style: context.theme.textTheme.bodySmall),
-                Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: Container(
-                        height: 1,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                        ))),
+                separator(),
                 Padding(
                     padding: const EdgeInsets.symmetric(vertical: 10),
                     child: Text(
@@ -96,27 +78,9 @@ class DetailPage extends StatelessWidget {
                 SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(spacing: 10, children: [
-                      Container(
-                        height: 75,
-                        color: context.appColor.background,
-                        child: Image.network(
-                          'https://picsum.photos/400/200',
-                        ),
-                      ),
-                      Container(
-                        height: 75,
-                        color: context.appColor.background,
-                        child: Image.network(
-                          'https://picsum.photos/400/200',
-                        ),
-                      ),
-                      Container(
-                        height: 75,
-                        color: context.appColor.background,
-                        child: Image.network(
-                          'https://picsum.photos/400/200',
-                        ),
-                      ),
+                      production(context),
+                      production(context),
+                      production(context)
                     ]))
               ],
             ),
@@ -130,7 +94,8 @@ class DetailPage extends StatelessWidget {
     return Container(
         padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
         decoration: BoxDecoration(
-            border: Border.all(), borderRadius: BorderRadius.circular(50)),
+            border: Border.all(color: context.appColor.main),
+            borderRadius: BorderRadius.circular(50)),
         child: Text(
           category,
           style: context.theme.textTheme.labelSmall,
@@ -141,7 +106,8 @@ class DetailPage extends StatelessWidget {
     return Container(
         padding: EdgeInsets.all(15),
         decoration: BoxDecoration(
-            border: Border.all(), borderRadius: BorderRadius.circular(10)),
+            border: Border.all(color: context.appColor.main),
+            borderRadius: BorderRadius.circular(10)),
         child: Column(children: [
           Text(
             rating,
@@ -152,5 +118,24 @@ class DetailPage extends StatelessWidget {
             style: context.theme.textTheme.bodySmall,
           )
         ]));
+  }
+
+  Padding separator() {
+    return Padding(
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        child: Container(
+            height: 1,
+            decoration: BoxDecoration(
+              color: Colors.grey,
+            )));
+  }
+
+  Container production(BuildContext context) {
+    return Container(
+      height: 75,
+      width: 150,
+      color: Colors.white.withOpacity(0.9),
+      child: Image.network('https://picsum.photos/100/25'),
+    );
   }
 }

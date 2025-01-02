@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_movie_info_app/pages/detail/detail_page.dart';
 import 'package:flutter_movie_info_app/pages/home/home_page.dart';
 import 'package:flutter_movie_info_app/theme.dart';
 
@@ -16,9 +15,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.dark,
       // theme: lightTheme,
       darkTheme: darkTheme,
-      home:
-          // HomePage(),
-          DetailPage(),
+      home: HomePage(),
     );
   }
 }

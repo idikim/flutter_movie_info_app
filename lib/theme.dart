@@ -14,12 +14,12 @@ ThemeData _theme(Brightness brightness, AppThemeExtension ext) {
       extensions: [ext],
       textTheme: TextTheme(
         labelLarge: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-        labelMedium: TextStyle(fontSize: 16),
-        labelSmall: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+        labelSmall: TextStyle(
+            fontSize: 14, fontWeight: FontWeight.bold, color: ext.mainLight),
         //
         bodyLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         bodyMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-        bodySmall: TextStyle(fontSize: 14),
+        bodySmall: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
       ));
 }
 
