@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_movie_info_app/theme.dart';
 
@@ -9,7 +7,10 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
-          Image.network('https://picsum.photos/600/900'),
+          Image.network(
+            'https://picsum.photos/600/900',
+            fit: BoxFit.cover,
+          ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Column(
