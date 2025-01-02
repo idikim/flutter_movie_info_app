@@ -48,42 +48,10 @@ class DetailPage extends StatelessWidget {
                 Row(
                   spacing: 5,
                   children: [
-                    Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            border: Border.all(),
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Text(
-                          'Animation',
-                          style: context.theme.textTheme.labelSmall,
-                        )),
-                    Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            border: Border.all(),
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Text(
-                          'Adventure',
-                          style: context.theme.textTheme.labelSmall,
-                        )),
-                    Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            border: Border.all(),
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Text(
-                          'Family',
-                          style: context.theme.textTheme.labelSmall,
-                        )),
-                    Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            border: Border.all(),
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Text(
-                          'Comedy',
-                          style: context.theme.textTheme.labelSmall,
-                        )),
+                    categoryIcon(context, 'Animation'),
+                    categoryIcon(context, 'Adventure'),
+                    categoryIcon(context, 'Family'),
+                    categoryIcon(context, 'Comedy'),
                   ],
                 ),
                 Padding(
@@ -116,82 +84,11 @@ class DetailPage extends StatelessWidget {
                       child: Row(
                         spacing: 10,
                         children: [
-                          Container(
-                              padding: EdgeInsets.all(15),
-                              decoration: BoxDecoration(
-                                  border: Border.all(),
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Column(children: [
-                                Text(
-                                  '6.949',
-                                  style: context.theme.textTheme.bodySmall,
-                                ),
-                                Text(
-                                  '평점',
-                                  style: context.theme.textTheme.bodySmall,
-                                )
-                              ])),
-                          Container(
-                              padding: EdgeInsets.all(15),
-                              decoration: BoxDecoration(
-                                  border: Border.all(),
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Column(children: [
-                                Text(
-                                  '331',
-                                  style: context.theme.textTheme.bodySmall,
-                                ),
-                                Text(
-                                  '평점투표수',
-                                  style: context.theme.textTheme.bodySmall,
-                                )
-                              ])),
-                          Container(
-                              padding: EdgeInsets.all(15),
-                              decoration: BoxDecoration(
-                                  border: Border.all(),
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Column(children: [
-                                Text(
-                                  '5466.535',
-                                  style: context.theme.textTheme.bodySmall,
-                                ),
-                                Text(
-                                  '인기점수',
-                                  style: context.theme.textTheme.bodySmall,
-                                )
-                              ])),
-                          Container(
-                              padding: EdgeInsets.all(15),
-                              decoration: BoxDecoration(
-                                  border: Border.all(),
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Column(children: [
-                                Text(
-                                  '\$150000000',
-                                  style: context.theme.textTheme.bodySmall,
-                                ),
-                                Text(
-                                  '예산',
-                                  style: context.theme.textTheme.bodySmall,
-                                )
-                              ])),
-                          Container(
-                              padding: EdgeInsets.all(15),
-                              decoration: BoxDecoration(
-                                  border:
-                                      Border.all(color: context.appColor.main),
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Column(children: [
-                                Text(
-                                  '\$423586580',
-                                  style: context.theme.textTheme.bodySmall,
-                                ),
-                                Text(
-                                  '수익',
-                                  style: context.theme.textTheme.bodySmall,
-                                )
-                              ])),
+                          movieInfoIcon(context, '6.949', '평점'),
+                          movieInfoIcon(context, '331', '평점투표수'),
+                          movieInfoIcon(context, '5466.535', '인기점수'),
+                          movieInfoIcon(context, '\$150000000', '예산'),
+                          movieInfoIcon(context, '\$423586580', '수익'),
                         ],
                       )),
                 ),
@@ -226,5 +123,33 @@ class DetailPage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Container movieInfoIcon(BuildContext context, String rating, String name) {
+    return Container(
+        padding: EdgeInsets.all(15),
+        decoration: BoxDecoration(
+            border: Border.all(), borderRadius: BorderRadius.circular(10)),
+        child: Column(children: [
+          Text(
+            rating,
+            style: context.theme.textTheme.bodySmall,
+          ),
+          Text(
+            name,
+            style: context.theme.textTheme.bodySmall,
+          )
+        ]));
+  }
+
+  Container categoryIcon(BuildContext context, String category) {
+    return Container(
+        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+        decoration: BoxDecoration(
+            border: Border.all(), borderRadius: BorderRadius.circular(50)),
+        child: Text(
+          category,
+          style: context.theme.textTheme.labelSmall,
+        ));
   }
 }
