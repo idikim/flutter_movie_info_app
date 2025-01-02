@@ -125,6 +125,17 @@ class DetailPage extends StatelessWidget {
     );
   }
 
+  Container categoryIcon(BuildContext context, String category) {
+    return Container(
+        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+        decoration: BoxDecoration(
+            border: Border.all(), borderRadius: BorderRadius.circular(50)),
+        child: Text(
+          category,
+          style: context.theme.textTheme.labelSmall,
+        ));
+  }
+
   Container movieInfoIcon(BuildContext context, String rating, String name) {
     return Container(
         padding: EdgeInsets.all(15),
@@ -140,16 +151,5 @@ class DetailPage extends StatelessWidget {
             style: context.theme.textTheme.bodySmall,
           )
         ]));
-  }
-
-  Container categoryIcon(BuildContext context, String category) {
-    return Container(
-        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-        decoration: BoxDecoration(
-            border: Border.all(), borderRadius: BorderRadius.circular(50)),
-        child: Text(
-          category,
-          style: context.theme.textTheme.labelSmall,
-        ));
   }
 }

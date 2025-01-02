@@ -40,11 +40,11 @@ class DarkTheme extends AppThemeExtension {
   });
 }
 
-class LightTheme extends AppThemeExtension {
-  LightTheme({
-    super.main = Colors.black,
-    super.mainLight = const Color(0xAAFF0000),
-    super.sub = const Color(0xFFFFFF00),
-    super.background = Colors.white,
-  });
-}
+// class LightTheme extends AppThemeExtension {
+//   LightTheme({
+//     super.main = Colors.black,
+//     super.mainLight = const Color(0xAAFF0000),
+//     super.sub = const Color(0xFFFFFF00),
+//     super.background = Colors.white,
+//   });
+// }

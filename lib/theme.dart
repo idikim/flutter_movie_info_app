@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_movie_info_app/custom_theme.dart';
 
-final lightTheme = _theme(Brightness.light, LightTheme());
+// final lightTheme = _theme(Brightness.light, LightTheme());
 final darkTheme = _theme(Brightness.dark, DarkTheme());
 
 ThemeData _theme(Brightness brightness, AppThemeExtension ext) {
