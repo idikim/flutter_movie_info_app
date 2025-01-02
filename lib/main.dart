@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: ThemeMode.dark,
+      // theme: lightTheme,
       darkTheme: darkTheme,
       home: HomePage(),
     );

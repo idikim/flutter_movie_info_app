@@ -4,7 +4,7 @@ class SortByRating extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      NameOfField('평점 높은순'),
+      nameOfField('평점 높은순'),
       SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           padding: EdgeInsets.only(left: 20),
@@ -22,7 +22,7 @@ class SortByRating extends StatelessWidget {
     ]);
   }
 
-  Container NameOfField(String name) {
+  Container nameOfField(String name) {
     return Container(
         alignment: Alignment.centerLeft,
         padding: const EdgeInsets.all(20),

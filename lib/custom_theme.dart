@@ -33,9 +33,18 @@ class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
 
 class DarkTheme extends AppThemeExtension {
   DarkTheme({
-    super.main = const Color(0xFF0000FF),
-    super.mainLight = const Color(0xAA0000FF),
-    super.sub = const Color(0xFFFF00FF),
+    super.main = Colors.white,
+    super.mainLight = Colors.blue,
+    super.sub = Colors.grey,
     super.background = Colors.black,
   });
 }
+
+// class LightTheme extends AppThemeExtension {
+//   LightTheme({
+//     super.main = Colors.black,
+//     super.mainLight = const Color(0xAAFF0000),
+//     super.sub = const Color(0xFFFFFF00),
+//     super.background = Colors.white,
+//   });
+// }
