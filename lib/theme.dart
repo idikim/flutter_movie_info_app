@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_movie_info_app/custom_theme.dart';
 
+final lightTheme = _theme(Brightness.light, LightTheme());
 final darkTheme = _theme(Brightness.dark, DarkTheme());
 
 ThemeData _theme(Brightness brightness, AppThemeExtension ext) {
@@ -12,10 +13,13 @@ ThemeData _theme(Brightness brightness, AppThemeExtension ext) {
           ColorScheme.fromSeed(brightness: brightness, seedColor: ext.main),
       extensions: [ext],
       textTheme: TextTheme(
-        // bodyLarge: TextStyle(fontSize: 20),
-        bodyMedium: TextStyle(
-            color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
-        // bodySmall: TextStyle(fontSize: 20),
+        labelLarge: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        labelMedium: TextStyle(fontSize: 16),
+        labelSmall: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+        //
+        bodyLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        bodyMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+        bodySmall: TextStyle(fontSize: 14),
       ));
 }
 

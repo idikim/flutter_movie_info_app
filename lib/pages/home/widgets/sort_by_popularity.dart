@@ -7,7 +7,7 @@ class SortByPopularity extends StatelessWidget {
       NameOfField('인기순'),
       SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          padding: EdgeInsets.only(left: 10),
+          padding: EdgeInsets.symmetric(horizontal: 10),
           child: Row(children: [
             ...List.generate(
                 20,
