@@ -7,9 +7,12 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
-          Image.network(
-            'https://picsum.photos/600/900',
-            fit: BoxFit.cover,
+          Hero(
+            tag: 'most-popular',
+            child: Image.network(
+              'https://picsum.photos/600/900',
+              fit: BoxFit.cover,
+            ),
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),

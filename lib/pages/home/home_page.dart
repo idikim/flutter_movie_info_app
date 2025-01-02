@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_movie_info_app/pages/detail/detail_page.dart';
 import 'package:flutter_movie_info_app/pages/home/widgets/sort_by_popularity.dart';
 import 'package:flutter_movie_info_app/pages/home/widgets/currently_playing.dart';
 import 'package:flutter_movie_info_app/pages/home/widgets/sort_by_rating.dart';
@@ -15,12 +16,30 @@ class HomePage extends StatelessWidget {
             child: Text('가장 인기있는'),
           ),
           Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Image.network('https://picsum.photos/600/900',
-                    fit: BoxFit.cover),
-              )),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return DetailPage();
+                      },
+                    ),
+                  );
+                },
+                child: Hero(
+                  tag: 'most-popular',
+                  child: SizedBox(
+                    child: Image.network('https://picsum.photos/600/900',
+                        fit: BoxFit.cover),
+                  ),
+                ),
+              ),
+            ),
+          ),
           CurrentlyPlaying(),
           SortByPopularity(),
           SortByRating(),
